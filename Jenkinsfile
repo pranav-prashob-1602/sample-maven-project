@@ -9,6 +9,9 @@ pipeline {
       }
     }
     stage('publish') {
+      steps {
+        echo 'In Publishing...'
+      }
       post {
         success {
           echo 'Build completed'
