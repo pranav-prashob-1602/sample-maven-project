@@ -9,12 +9,9 @@ pipeline {
       }
     }
     stage('publish') {
-      steps {
-        sh './mvnw package'
-      }
       post {
         success {
-          archiveArtifacts 'target/*.jar'
+          archiveArtifacts artifacts: 'build/'
         }
       }
     }
