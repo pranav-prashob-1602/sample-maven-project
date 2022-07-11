@@ -11,7 +11,8 @@ pipeline {
     stage('publish') {
       post {
         success {
-          archiveArtifacts artifacts: 'build/'
+          echo 'Build completed'
+          //archiveArtifacts artifacts: 'build/'
         }
       }
     }
